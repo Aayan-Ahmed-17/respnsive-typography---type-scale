@@ -1,10 +1,12 @@
 :root {
     /* Base sizes */
+    --text-xxxs: 0.45rem;
+    --text-xxs: 0.6rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.85rem;
     --text-base-size: 1rem;
   
     /* Type scale */
-    --text-xs: calc(var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-base-size) / var(--text-scale-ratio));
     --text-md: calc(var(--text-base-size) * var(--text-scale-ratio));
     --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
     --text-xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
@@ -20,11 +22,17 @@
   /* Responsive base size adjustment */
   @media screen and (min-width: 300px) {
     :root {
-      --text-base-size: calc(0.875rem + 0.5vw);
+         /* text size will remain the same from 300px to above only scale-ratio will change  */
+      --text-xxxs: calc(0.4rem + 0.25vw);
+      --text-xxs: calc(0.5rem + 0.3vw);
+      --text-xs: calc(0.6rem + 0.4vw);
+      --text-sm: calc(0.73rem + 0.5vw);
+      --text-base-size: calc(0.875rem + 0.6vw);
+
       --text-scale-ratio: 1.2;
     }
   }
-
+/*
   @media screen and (min-width: 600px) {
     :root {
         --text-scale-ratio: 1.25;
@@ -37,12 +45,12 @@
       }
     }
     
-      /* Larger base size for larger screens */
+      /* Larger base size for larger screens 
   @media screen and (min-width: 1250px) {
     :root {
       --text-scale-ratio: 1.414
     }
-  }
+  } */
   
   /* Apply styles */
   body {
@@ -68,7 +76,7 @@
     font-size: var(--text-lg);
   }
   
-  small, .text-small {
+  .text-sm {
     font-size: var(--text-sm);
   }
   

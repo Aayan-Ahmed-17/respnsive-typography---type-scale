@@ -1,19 +1,23 @@
+:root{
+    --nav-color: #364156;
+    --green: #288169;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6b46c1;
-    padding: var(--text-xs) var(--text-lg);
+    background-color: var(--nav-color);
+    padding: var(--text-xs) var(--text-sm);
     color: white;
 }
 .navbar-logo {
-    font-size: var(--text-md);
+    /* font-size: var(--text-md); */
     font-weight: bold;
     text-decoration: none;
     color: white;
 }
 .navbar-links {
-    /* display: none; */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -21,7 +25,6 @@
 .navbar-links li {
     display: inline;
     margin-left: var(--text-lg);
-    /* font-size: var(--text-); */
 }
 .navbar-links a {
     text-decoration: none;
@@ -30,12 +33,19 @@
 .navbar-links a:hover {
     color: #e9d8fd;
 }
+
 .navbar-toggle {
-    background-color: #553c9a;
+    background-color: var(--green);
     border: none;
+    border-radius: var(--text-xs);
     color: white;
-    padding: var(--text-xs) var(--text-sm);
+    padding: var(--text-xxs) var(--text-xs);
     cursor: pointer;
+}
+
+.navbar-toggle:nth-child(1){
+    color: var(--green);
+    background-color: white;
 }
 
 /* Tablet & smaller sizes */
